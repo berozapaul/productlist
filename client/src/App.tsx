@@ -8,6 +8,7 @@ import Footer from "./components/footer/Footer";
 import Sidebar from "./components/sidebar/Sidebar";
 import Home from "./components/home/Home";
 import {getProducts} from "./utils/APIUtils";
+import Preloader from "./components/preloader/Preloader";
 /*
  * Purpose: This is the main component to bootstrap the app.
  *
@@ -28,6 +29,10 @@ const App: React.FC = () => {
             }
         }
     }, []);
+
+    if(data.length < 1) {
+        return <Preloader/>
+    }
 
     const contextData = { data, slug };
     return (
