@@ -1,6 +1,7 @@
 import React from 'react';
 import {Article} from "../../types";
 import {formatter} from "../../utils/SiteUtils";
+import { useTranslation } from 'react-i18next';
 
 
 /*
@@ -11,13 +12,13 @@ import {formatter} from "../../utils/SiteUtils";
  */
 
 const ProductCard = (item: Article) => {
-
+    const { t } = useTranslation();
     return (
         <div className={'article'}>
             <img src={item.images[0].path} />
             <h3 className={'product-name'}>{item.name}</h3>
             <div><b>{formatter.format(item.prices.regular.value / 100)}</b></div>
-            <section role="button">Add to cart</section>
+            <section role="button">{t('card')}</section>
         </div>
    );
 };
