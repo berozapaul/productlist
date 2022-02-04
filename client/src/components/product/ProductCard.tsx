@@ -1,7 +1,7 @@
-import React, {useContext} from 'react';
-import AppContext from "../../AppContext";
-import {Article, Category, CategoryArticle} from "../../types";
-import {ArticleCard, formatter} from "../../ProductList";
+import React from 'react';
+import {Article} from "../../types";
+import {formatter} from "../../utils/SiteUtils";
+
 
 /*
  * Purpose: The purpose of this component is to render product as a card.
@@ -15,8 +15,8 @@ const ProductCard = (item: Article) => {
     return (
         <div className={'article'}>
             <img src={item.images[0].path} />
-            <div>{item.name}</div>
-            <div>{formatter.format(item.prices.regular.value / 100)}</div>
+            <h3 className={'product-name'}>{item.name}</h3>
+            <div><b>{formatter.format(item.prices.regular.value / 100)}</b></div>
             <section role="button">Add to cart</section>
         </div>
    );

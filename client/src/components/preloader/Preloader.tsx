@@ -1,4 +1,5 @@
 import React from 'react';
+import './preloader.css';
 
 /*
  * Purpose: The purpose of this component is to render a preloader.

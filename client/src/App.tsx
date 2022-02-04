@@ -3,12 +3,12 @@ import React, {useEffect, useState} from 'react';
 import AppContext from './AppContext';
 import {getSlug, isEmptyObject} from "./utils/SiteUtils";
 import Header from "./components/header/Header";
-import './App.css';
 import Footer from "./components/footer/Footer";
 import Sidebar from "./components/sidebar/Sidebar";
 import Home from "./components/home/Home";
 import {getProducts} from "./utils/APIUtils";
 import Preloader from "./components/preloader/Preloader";
+import './App.css';
 /*
  * Purpose: This is the main component to bootstrap the app.
  *
@@ -16,7 +16,7 @@ import Preloader from "./components/preloader/Preloader";
  * Author: dev@example.comroute
  */
 const App: React.FC = () => {
-    const [data, setData] = useState([]);
+    const [data, setData] = useState({});
     const slug = getSlug(false);
 
 
@@ -30,8 +30,9 @@ const App: React.FC = () => {
         }
     }, []);
 
-    if(data.length < 1) {
-        return <Preloader/>
+
+    if(data === null || isEmptyObject(data)) {
+        return <Preloader />
     }
 
     const contextData = { data, slug };

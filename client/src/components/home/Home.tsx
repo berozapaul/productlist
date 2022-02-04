@@ -1,7 +1,7 @@
 import React, {useContext} from 'react';
 import AppContext from '../../AppContext';
-import Product from "../item/Product";
-import ProductList from "../list/ProductList";
+import ProductList from "../product/ProductList";
+import ProductDetails from "../product/ProductDetails";
 
 /*
  * Purpose: The purpose of this component is to render home.
@@ -17,7 +17,7 @@ const Home = () => {
 
     return(
         <>
-            {slug ? <Product/> : <ProductList/>}
+            {slug ? <ProductDetails/> : <ProductList/>}
         </>
    )
 };

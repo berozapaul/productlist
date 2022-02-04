@@ -1,7 +1,6 @@
 import React, {useContext} from 'react';
 import AppContext from "../../AppContext";
-import {Article, Category, CategoryArticle} from "../../types";
-import {ArticleCard, formatter} from "../../ProductList";
+import {Article, Category} from "../../types";
 import ProductCard from "./ProductCard";
 
 /*

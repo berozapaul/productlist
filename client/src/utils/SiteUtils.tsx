@@ -40,3 +40,8 @@ export const generateSlug = (str: string) => {
 export const isEmptyObject = (obj: Object) => {
     return Object.keys(obj).length === 0 && obj.constructor === Object
 };
+
+export const formatter = new Intl.NumberFormat('de-DE', {
+    style: 'currency',
+    currency: 'EUR',
+});
