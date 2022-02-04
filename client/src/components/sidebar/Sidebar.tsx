@@ -1,4 +1,6 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import AppContext from "../../AppContext";
+import {Category} from "../../types";
 
 /*
  * Purpose: The purpose of this component is to render header nav bar.
@@ -8,22 +10,23 @@ import React from 'react';
  */
 
 const Sidebar: React.FC = () => {
+    const context = useContext(AppContext);
+
+    // @ts-ignore
+    const products: Category = context.data;
+
     return (
         <div className={'sidebar'}>
             <h3>Kategorien</h3>
-            {/*{this.state.categories.length ? (*/}
-            {/*    <ul>*/}
-            {/*        {this.state.categories[0].childrenCategories.map(({ name, urlPath }) => {*/}
-            {/*            return (*/}
-            {/*                <li>*/}
-            {/*                    <a href={`/${urlPath}`}>{name}</a>*/}
-            {/*                </li>*/}
-            {/*            );*/}
-            {/*        })}*/}
-            {/*    </ul>*/}
-            {/*) : (*/}
-            {/*    'Loading...'*/}
-            {/*)}*/}
+            <ul>
+                {products.childrenCategories.map(({ name, urlPath }) => {
+                    return (
+                        <li>
+                            <a href={`/${urlPath}`}>{name}</a>
+                        </li>
+                    );
+                })}
+            </ul>
         </div>
    );
 };

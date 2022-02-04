@@ -19,18 +19,14 @@ const ProductList: React.FC = () => {
 
     return (
         <div className={'content'}>
-            {
-                products.categoryArticles.articles.map((item: Article) => {
-                    return (
-                    <div className={'article'}>
-                        <img src={item.images[0].path} />
-                        <div>{item.name}</div>
-                        <div>{formatter.format(item.prices.regular.value / 100)}</div>
-                        <section role="button">Add to cart</section>
-                    </div>
-                    )
-                })
-            }
+            <h1>{products.name}<small> ({products.articleCount})</small></h1>
+            <div className={'articles'}>
+            {products.categoryArticles.articles.map((item: Article) => {
+                return (
+                    <ProductCard {...item}/>
+                );
+            })}
+            </div>
         </div>
    );
 };

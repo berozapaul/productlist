@@ -16,13 +16,9 @@ const Home = () => {
     const { slug } = context;
 
     return(
-        <div>
-            {slug ? <Product/> :
-                <div>
-                    <ProductList/>
-                </div>
-            }
-        </div>
+        <>
+            {slug ? <Product/> : <ProductList/>}
+        </>
    )
 };
 export default Home;
