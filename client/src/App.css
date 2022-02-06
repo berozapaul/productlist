@@ -17,10 +17,9 @@
 }
 
 .article > section[role="button"] {
-  padding: .2em;
   background-color: lightgoldenrodyellow;
   border: 1px solid lightgray;
   cursor: pointer;
   text-align: center;
 }
-.article h3.product-name{font-size: 1em;font-weight: normal;}
+

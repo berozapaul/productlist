@@ -12,7 +12,7 @@ const Header: React.FC = () => {
     const { t } = useTranslation();
     return (
         <div className={'header'}>
-            <strong>home24</strong>
+            <strong><a href={'/'}>home24</a></strong>
             <input placeholder={t('search')} />
         </div>
    );

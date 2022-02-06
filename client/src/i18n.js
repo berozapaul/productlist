@@ -13,6 +13,7 @@ const options = {
                 "card": "Add to cart",
                 "search": "Search",
                 "cat": "Categories",
+                "error": "Error: Try again.",
             }
         },
         de:{
@@ -20,6 +21,7 @@ const options = {
                 "card": "In den Warenkorb legen",
                 "search": "Suche",
                 "cat": "Kategorien",
+                "error": "Fehler, versuche es erneut.",
             }
         }
     },

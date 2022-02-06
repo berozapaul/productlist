@@ -2,6 +2,7 @@ import React, {useContext} from 'react';
 import AppContext from "../../AppContext";
 import {Article, Category} from "../../types";
 import ProductCard from "./ProductCard";
+import { getUniqueId } from "../../utils/SiteUtils";
 
 /*
  * Purpose: The purpose of this component is to render the footer.
@@ -15,6 +16,7 @@ const ProductList: React.FC = () => {
 
     // @ts-ignore
     const products: Category = context.data;
+    console.log(products);
 
     return (
         <div className={'content'}>
@@ -22,7 +24,7 @@ const ProductList: React.FC = () => {
             <div className={'articles'}>
             {products.categoryArticles.articles.map((item: Article) => {
                 return (
-                    <ProductCard {...item}/>
+                    <ProductCard key={getUniqueId()} {...item}/>
                 );
             })}
             </div>

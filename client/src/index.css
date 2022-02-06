@@ -30,6 +30,10 @@ body {
   float: right;
 }
 
+.header a{
+  text-decoration: none;
+}
+
 .sidebar {
   grid-area: sidebar;
   background-color: lavender;
@@ -49,6 +53,15 @@ body {
 .content {
   grid-area: content;
   grid-column: span 2;
+}
+
+.article .product-link{
+  text-decoration: none;
+}
+.article h3.product-name{
+  font-size: 1em;
+  font-weight: normal;
+  color: #000;
 }
 
 .footer {

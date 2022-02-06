@@ -2,6 +2,7 @@ import React, {useContext} from 'react';
 import AppContext from "../../AppContext";
 import {Category} from "../../types";
 import {useTranslation} from "react-i18next";
+import {getUniqueId} from "../../utils/SiteUtils";
 
 /*
  * Purpose: The purpose of this component is to render header nav bar.
@@ -23,7 +24,7 @@ const Sidebar: React.FC = () => {
             <ul>
                 {products.childrenCategories.map(({ name, urlPath }) => {
                     return (
-                        <li>
+                        <li key={getUniqueId()}>
                             <a href={`/${urlPath}`}>{name}</a>
                         </li>
                     );
