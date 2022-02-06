@@ -1,44 +1,69 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+Owner|Type
+---|---
+Front-End Chapter|Support
 
-In the project directory, you can run:
+### Welcome
 
-### `npm start`
+Welcome to the "take-home tech task". This repository contains an application that, when running, will request data from our GraphQL server and render a basic product listing page. It's a simple page, with a header, sidebar, some articles and a footer. Your task is to spend some time looking at how it is built and try to improve it by refactoring the code into something that you would be personally proud of.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Current Code & Structure
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+The application is split into two parts, the server and the client. This test is mainly focussing on the client aspect of the code, so try and work mainly in the client folder. All code is written in TypeScript with React as this is what we use at home24 daily.
 
-### `npm test`
+##### Server
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The server is a basic API endpoint for accessing live data. The server is built using express and a simple 5-minute cache to reduce the number of unnecessary calls being made while you work on the client. The server proxies all POST requests from `/graphql` to our public production GraphQL endpoint.
 
-### `npm run build`
+##### Client
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The client is a basic create-react-app application that renders a product listing page. The page itself shows 50 products from a specific product category. The code and UX could do with some improvement, we've worked hard to create it in a way that will allow you plenty of room to show off your skills and experience that you've gained working as a Frontend Engineer. Please take some time to look around and spot all the areas that you would like to improve. Remember, that when you are finished, you should be happy with your work.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+If you find that you couldn't finish everything that you wanted to, then please make a note of them in the [TODO.md](TODO.md). Make sure to include what it was you wanted to do and why you wanted to do it.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Getting up & running
 
-### `npm run eject`
+Both the server and client need to be installed and started.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+##### Server
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1) `cd server`
+2) `npm install`
+2) `npm start`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+##### Client
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+1) `cd ../client`
+2) `npm install`
+2) `npm start`
 
-## Learn More
+_Note: create-react-app should open your default browser at localhost to show the application working._
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Tips
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+We use the following technologies. Demonstrating how you would use these would make it easier for us to see how smooth your transition into the team might be:
+
+1) React with [Hooks](https://reactjs.org/docs/hooks-intro.html)
+2) [Jest](https://jestjs.io/)
+3) [Emotion.js](https://github.com/emotion-js/emotion) with [styled-system](https://styled-system.com/)
+4) [TypeScript](https://www.typescriptlang.org/)
+
+_Note: it's not compulsory to use these technologies but it does help the team process your submission faster. If you aren't familiar with some or all of these then please don't worry, use whatever you need to get the job done_
+
+### Finishing up
+
+Please make sure all your changes are included in your submission and that any new parts added to the application are documented so the team can easily see your hard work.
+
+Code can be submitted back to your recruiter as a zip file containing all the code (excluding both node_modules folders) or you can push your code to a public version control system and send us the link e.g. Github etc
+
+If you have any feedback or notes that you'd like to share with the team please add them to [NOTES.md](NOTES.md).
+
+### What to expect
+
+The team will review your submission and if everyone is happy with the work, we'll ask you to come in and meet us. Getting feedback on your submission can take anything between  3 - 5 working days.
+
+### Closing notes
+
+If you have any difficulty or something just isn't working as it should be, please let your recruiter know ASAP so we can support you.
+
+Thank you for applying to work at home24, we value and appreciate the time that you are spending on this. Good luck and have fun.
